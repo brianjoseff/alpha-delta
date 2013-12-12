@@ -20,10 +20,20 @@
 // jQuery ->
 //   $("#s3-uploader").S3Uploader()
 
-
+$(document).ready(function(){
 $('#see_house').click(function () {
+
    $('#main_container').slideToggle({
      direction: "down"
    }, 300);
-   $(this).toggleClass('clientsClose');
+   $('#footer_toggle_button').toggle();
  });
+ $('#footer_toggle_button').click(function () {
+
+    $('#main_container').slideToggle({
+      direction: "up"
+    }, 300);
+    $('#footer_toggle_button').toggle();
+  }); 
+ 
+});

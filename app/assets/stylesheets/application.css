@@ -255,6 +255,47 @@ li,  a{
 }
 
 
+#see_house{
+	margin-top: -60px;
+  background-color: hsl(13, 100%, 26%) !important;
+  background-repeat: repeat-x;
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#ff4714", endColorstr="#841c00");
+  background-image: -khtml-gradient(linear, left top, left bottom, from(#ff4714), to(#841c00));
+  background-image: -moz-linear-gradient(top, #ff4714, #841c00);
+  background-image: -ms-linear-gradient(top, #ff4714, #841c00);
+  background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #ff4714), color-stop(100%, #841c00));
+  background-image: -webkit-linear-gradient(top, #ff4714, #841c00);
+  background-image: -o-linear-gradient(top, #ff4714, #841c00);
+  background-image: linear-gradient(#ff4714, #841c00);
+  border-color: #841c00 #841c00 hsl(13, 100%, 19%);
+	/*border: 1px solid #841c00;*/
+  color: #f9f087 !important;
+	font-weight: bold;
+  text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.46);
+  -webkit-font-smoothing: antialiased;
+}
+#footer_toggle_button{
+
+  background-color: hsl(13, 100%, 26%) !important;
+  background-repeat: repeat-x;
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#ff4714", endColorstr="#841c00");
+  background-image: -khtml-gradient(linear, left top, left bottom, from(#ff4714), to(#841c00));
+  background-image: -moz-linear-gradient(top, #ff4714, #841c00);
+  background-image: -ms-linear-gradient(top, #ff4714, #841c00);
+  background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #ff4714), color-stop(100%, #841c00));
+  background-image: -webkit-linear-gradient(top, #ff4714, #841c00);
+  background-image: -o-linear-gradient(top, #ff4714, #841c00);
+  background-image: linear-gradient(#ff4714, #841c00);
+  border-color: #841c00 #841c00 hsl(13, 100%, 19%);
+	/*border: 1px solid #841c00;*/
+  color: #f9f087 !important;
+	font-weight: bold;
+  text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.46);
+  -webkit-font-smoothing: antialiased;
+}
+
+
+
 
 footer{
 	margin-bottom:0;
@@ -267,10 +308,21 @@ footer{
   -webkit-box-shadow: rgba(000,000,000,0.3) 0 1px 1px;
   -moz-box-shadow: rgba(000,000,000,0.3) 0 1px 1px;
   box-shadow: rgba(000,000,000,0.3) 0 1px 1px;
+	
+	height: 100px;
+	width: auto;
 }
 footer a{
 	font-size: 14px !important;
   color: #f1ce0f !important;
-  text-shadow: #70651e 0 1px 0 !important;
+	font-weight: bold;
+/*  text-shadow: #70651e 0 2px 2px !important;*/
+text-shadow: #000 0 1px 1px !important;
 	background: #4c58d4;
+	text-decoration: none;
+}
+footer a:hover{
+	color: #f9f087 !important;
+	bacground-color: #4c58d4 !important;
+	
 }

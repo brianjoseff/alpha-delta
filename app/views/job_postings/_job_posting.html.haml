@@ -1,0 +1,11 @@
+%div.row-fluid
+  =link_to job_posting.position, job_posting_path(job_posting)
+%div.row-fluid
+  =truncate(job_posting.job_description, 25)
+%div.row-fluid
+  =job_posting.expiration_date
+  =job_posting.location
+%div.row-fluid
+  =job_posting.job_category
+/ -feed_item.tags.each do |tag|
+/   =link_to tag.name, tag_url(tag), :class => "tag"

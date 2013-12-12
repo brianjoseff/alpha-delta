@@ -1,2 +1,14 @@
 %header
-  =link_to image_tag('alphadelta-logo1.png', :alt => "The Alpha Delta est. 1991"), root_path
+  =link_to image_tag('alphadelta-logo1.png', :alt => "The Alpha Delta est. 1991"), root_path, id: "header_logo"
+  %nav.navbar.navbar-default{role: "navigation"}
+    .ribbon
+      .ribbon-stitches-top
+      %strong.ribbon-content
+        %ul#nav_ul.nav.pull-right
+          %li=link_to "History", history_path
+          %li=link_to "Photos & Composites", albums_path
+          %li=link_to "Job Postings", job_postings_path
+          %li=link_to "Alumni News", alumni_news_path
+        .clearfix.visible-xs
+      .ribbon-stitches-bottom
+

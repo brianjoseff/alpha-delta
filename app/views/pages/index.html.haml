@@ -1,11 +1,13 @@
-#container
-  .col1
-    %span.frontcontainer
-      %h1 Alpha Delta Fraternity for Men
-      %p Alpha Delta is not a house at all. It is a houseboat. Long before the days of Eleazar Wheelock, Hanover lay at the bottom of the ocean, an ocean of foamy beer. The other fraternities were just learning how to coagulate with phytoplankton. Meanwhile, the precocious brothers of AD had already mastered the fine art of yachting, and were in the process of inventing the sextant with some Caribbean mermaids who'd come along for the ride.
+.row-fluid
+  .span8
+    %h1 Alpha Delta
+    %p Alpha Delta is not a house at all. It is a houseboat. Long before the days of Eleazar Wheelock, Hanover lay at the bottom of the ocean, an ocean of foamy beer. The other fraternities were just learning how to coagulate with phytoplankton. Meanwhile, the precocious brothers of AD had already mastered the fine art of yachting, and were in the process of inventing the sextant with some Caribbean mermaids who'd come along for the ride.
 
-      %p For centuries the Adelphian, as the schooner was called, enjoyed smooth sailing and free cable, until one day a bit of ocean floor algae that had evolved into a college dean pulled the plug, so to speak. The ocean drained into the Connecticut, and the Adelphian plummeted to its current site, only the quarterdeck remaining above ground. Alpha Delta may not look much like a boat anymore, but it's still been known to rock every so often.
-  .col2
-    %span.frontcontainer
-      %h2 News Feed
-  %span.clear
+    %p For centuries the Adelphian, as the schooner was called, enjoyed smooth sailing and free cable, until one day a bit of ocean floor algae that had evolved into a college dean pulled the plug, so to speak. The ocean drained into the Connecticut, and the Adelphian plummeted to its current site, only the quarterdeck remaining above ground. Alpha Delta may not look much like a boat anymore, but it's still been known to rock every so often.
+    
+  .span4
+    %h3 News Feed
+    = render @news_items
+    -if current_user
+      =link_to "Add News Item", new_news_item_path
+%span.clear

@@ -1,9 +1,22 @@
 Alphadelta::Application.routes.draw do
-  get "pages/index"
+  
+  
+  devise_for :users
+  resources :job_postings
 
-  get "pages/about"
+  resources :assets
+  resources :albums do
+    resources :assets
+  end
 
-  get "pages/contact"
+  resources :news_items
+  resources :sessions, only: [:new, :create, :destroy]
+  resources :users
+  match '/signout', :to => 'sessions#destroy'
+  match '/signin', :to => 'sessions#new'
+  
+  match "/history", :to => 'pages#history'
+  match "/alumni_news", :to => 'pages#alumni_news'
 
   root :to => 'pages#index'
   

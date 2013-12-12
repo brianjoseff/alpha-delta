@@ -1,0 +1,41 @@
+.form
+  = form_for(@job_posting, :action => 'update', :html => { :multipart => true}) do |f|
+    - if @job_posting.errors.any?
+      #error_explanation
+        %h2
+          = pluralize(@job_posting.errors.count, "error")
+          prohibited this job posting from being saved:
+        %ul
+          - @job_posting.errors.full_messages.each do |msg|
+            %li= msg
+    .field
+      = f.label :position
+      %br/
+      = f.text_field :position
+    .field
+      = f.label :location
+      %br/
+      = f.text_field :location
+    .field
+      = f.label :expiration_date
+      %br/
+      = date_select(@job_posting, :start_year => Time.now.year, :use_month_numbers => true, :include_blank => true)
+    .field
+      = f.label :job_description
+      %br/
+      = f.text_field :job_description
+    .field
+      = f.label :qualifications
+      %br/
+      = f.text_field :qualifications
+    .field
+      = f.label :job_category
+      %br/
+      = f.text_field :job_category
+    .field
+      = f.label :application_instruction
+      %br/
+      = f.text_field :application_instruction
+
+    .actions
+      = f.submit

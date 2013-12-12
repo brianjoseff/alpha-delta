@@ -1,0 +1,9 @@
+%h1= @title
+=form_for(:session, :url => sessions_path) do |f|
+  /=render "shared/error_messages", :target => @user
+  %dl
+    %dt.field=f.label :email
+    %dd.field=f.text_field :email
+    %dt.field=f.label :password
+    %dd.field=f.password_field :password
+  .action=f.submit "Sign in"

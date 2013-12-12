@@ -1,0 +1,7 @@
+.asset
+  = link_to image_tag(asset.image_url(:thumb)), asset if asset.image?
+  / .name= asset.name
+  .actions
+    = link_to "edit", edit_asset_path(asset)
+    |
+    \#{link_to "remove", asset, :confirm => 'Are you sure?', :method => :delete}

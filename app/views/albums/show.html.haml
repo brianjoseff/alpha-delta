@@ -1,0 +1,28 @@
+%p polymorphic
+=@imageable.to_s
+=@asset.to_s
+/ = s3_uploader_form callback_url: [@imageable, @asset], callback_param: "asset[image_url]", id: "s3-uploader" do
+/   = file_field_tag :file, multiple: true
+
+
+= form_for [@imageable, @asset] do |f|
+  = f.label :image, "Upload images:"
+  = f.file_field :image, multiple: true, name: "album[image]"  
+
+%script#template-upload{type: "text/x-tmpl"}
+  :cdata
+    <div id="file-{%=o.unique_id%}" class="upload">
+    {%=o.name%}
+    <div class="progress"><div class="bar" style="width: 0%"></div></div>
+    </div>
+
+
+
+%p Non-bates
+= s3_uploader_form post: album_assets_url(@assets), as: "asset[image_url]", id: "s3-uploader" do
+
+  = file_field_tag :file, multiple: true
+  
+    
+#album
+  =render @assets

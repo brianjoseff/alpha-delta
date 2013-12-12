@@ -17,5 +17,5 @@
 //= require s3_direct_upload
 //= require_tree .
 
-jQuery ->
-  $("#s3-uploader").S3Uploader()
+// jQuery ->
+//   $("#s3-uploader").S3Uploader()

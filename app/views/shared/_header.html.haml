@@ -5,10 +5,11 @@
       .ribbon-stitches-top
       %strong.ribbon-content
         %ul#nav_ul.nav.pull-right
-          %li=link_to "History", history_path
-          %li=link_to "Photos & Composites", albums_path
-          %li=link_to "Job Postings", job_postings_path
-          %li=link_to "Alumni News", alumni_news_path
+          %li{:class => "#{'active' if current_page?(root_path)}"}=link_to "Home", root_path
+          %li{:class => "#{'active' if current_page?(history_path)}"}=link_to "History", history_path
+          %li{:class => "#{'active' if current_page?(albums_path)}"}=link_to "Photos & Composites", albums_path
+          %li{:class => "#{'active' if current_page?(job_postings_path)}"}=link_to "Job Postings", job_postings_path
+          %li{:class => "#{'active' if current_page?(alumni_news_path)}"}=link_to "Alumni News", alumni_news_path
         .clearfix.visible-xs
       .ribbon-stitches-bottom
 

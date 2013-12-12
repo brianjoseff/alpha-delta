@@ -15,7 +15,9 @@
  */
 
 
-
+#main_container{
+	
+}
 
 .inner-content{
 	margin-top: 100px;
@@ -151,6 +153,9 @@ li,  a{
    font-size: 14px !important;
    color: #f1ce0f !important;
    text-shadow: #70651e 0 1px 0 !important;
+/*reverse*/
+/*   color: #70651e !important;
+   text-shadow: #f1ce0f 0 1px 0 !important;*/
    margin:0px !important;
    padding: 15px 10px !important;
    }
@@ -226,6 +231,28 @@ li,  a{
 	margin-right: 20px;
 }
 
+.navbar .nav> .active > a{
+		color: #bd3838 !important;
+		background: none;
+		text-decoration: none !important;
+		background-color: #4c58d4 !important;
+		background: -webkit-gradient(linear, left top, left bottom, from(#4c58d4), to(#243391));
+   background: -webkit-linear-gradient(top, #4c58d4, #243391);
+   background: -moz-linear-gradient(top, #4c58d4, #243391);
+   background: -ms-linear-gradient(top, #4c58d4, #243391);
+   background: -o-linear-gradient(top, #4c58d4, #243391);
+   background-image: -ms-linear-gradient(top, #4c58d4 0%, #243391 100%);
+   -webkit-box-shadow: none !important;
+   -moz-box-shadow: none !important;
+   box-shadow: none !important;
+
+}
+.navbar > .active > a:hover{
+		color: #f9f087;
+}
+.navbar > li > a:hover{
+		color: #f9f087;
+}
 
 
 

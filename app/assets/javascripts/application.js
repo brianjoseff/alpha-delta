@@ -19,3 +19,11 @@
 
 // jQuery ->
 //   $("#s3-uploader").S3Uploader()
+
+
+$('#see_house').click(function () {
+   $('#main_container').slideToggle({
+     direction: "down"
+   }, 300);
+   $(this).toggleClass('clientsClose');
+ });

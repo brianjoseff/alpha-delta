@@ -1,7 +1,9 @@
 class Asset < ActiveRecord::Base
   belongs_to :imageable, :polymorphic => true
   # before_create :default_name
-
+  attr_accessible :file, :file_cache
+  mount_uploader :file, ImageUploader
+  
   def default_name
     self.name ||= File.basename(image.filename, '.*').titleize if image
   end

@@ -1,12 +1,12 @@
 development:
   bucket: alphadelta-dev
-  access_key_id: AKIAIDQFQL6U46ZQT3AA
-  secret_access_key: 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
+  access_key_id: <%= ENV["S3_KEY"] %>
+  secret_access_key: <%= ENV['S3_SECRET'] %>
 test:
   bucket: alphadelta-test
-  access_key_id: AKIAIDQFQL6U46ZQT3AA
-  secret_access_key: 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
+  access_key_id: <%= ENV["S3_KEY"] %>
+  secret_access_key: <%= ENV['S3_SECRET'] %>
 production:
   bucket: alphadelta-pro
-  access_key_id: AKIAIDQFQL6U46ZQT3AA
-  secret_access_key: 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
+  access_key_id: <%= ENV["S3_KEY"] %>
+  secret_access_key: <%= ENV['S3_SECRET'] %>

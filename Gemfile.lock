@@ -38,9 +38,16 @@ GEM
       json (~> 1.4)
       nokogiri (>= 1.4.4)
       uuidtools (~> 2.1)
+    aws_cf_signer (0.1.2)
     bcrypt-ruby (3.1.2)
     bootstrap-sass (2.1.1.0)
     builder (3.0.4)
+    carrierwave (0.8.0)
+      activemodel (>= 3.2.0)
+      activesupport (>= 3.2.0)
+    cloudinary (1.0.66)
+      aws_cf_signer
+      rest-client
     cocaine (0.2.1)
     coffee-rails (3.2.2)
       coffee-script (>= 2.2.0)
@@ -114,6 +121,8 @@ GEM
     rdoc (3.12.2)
       json (~> 1.4)
     ref (1.0.5)
+    rest-client (1.6.7)
+      mime-types (>= 1.16)
     s3_direct_upload (0.1.6)
       coffee-rails (>= 3.2.1)
       jquery-fileupload-rails (~> 0.4.1)
@@ -159,6 +168,8 @@ DEPENDENCIES
   aws-s3
   aws-sdk
   bootstrap-sass
+  carrierwave
+  cloudinary
   coffee-rails (~> 3.2.1)
   devise
   haml

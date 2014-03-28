@@ -28,6 +28,8 @@ gem 'jquery-fileupload-rails'
 end
 
 
+gem 'cloudinary'
+gem 'carrierwave'
 
 gem 'bootstrap-sass'
 gem 'twitter-bootstrap-rails'
